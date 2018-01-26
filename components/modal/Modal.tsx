@@ -89,7 +89,7 @@ export default class Modal extends React.Component<ModalProps, {}> {
   static confirm: ModalFunc;
 
   static defaultProps = {
-    prefixCls: 'ant-modal',
+    prefixCls: 'mk-modal',
     width: 520,
     transitionName: 'zoom',
     maskTransitionName: 'fade',

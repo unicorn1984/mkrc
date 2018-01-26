@@ -15,8 +15,8 @@ const Icon = (props: IconProps) => {
   const { type, className = '', spin } = props;
   const classString = classNames({
     anticon: true,
-    'anticon-spin': !!spin || type === 'loading',
-    [`anticon-${type}`]: true,
+    'mkicon-spin': !!spin || type === 'loading',
+    [`mkicon-${type}`]: true,
   }, className);
   return <i {...omit(props, ['type', 'spin'])} className={classString} />;
 };

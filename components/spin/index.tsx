@@ -24,7 +24,7 @@ export interface SpinState {
 
 export default class Spin extends React.Component<SpinProps, SpinState> {
   static defaultProps = {
-    prefixCls: 'ant-spin',
+    prefixCls: 'mk-spin',
     spinning: true,
     size: 'default',
     wrapperClassName: '',

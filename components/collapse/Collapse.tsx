@@ -20,7 +20,7 @@ export default class Collapse extends React.Component<CollapseProps, any> {
   static Panel = CollapsePanel;
 
   static defaultProps = {
-    prefixCls: 'ant-collapse',
+    prefixCls: 'mk-collapse',
     bordered: true,
     openAnimation: { ...animation, appear() { } },
   };

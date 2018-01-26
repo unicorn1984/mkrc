@@ -70,7 +70,7 @@ export default class Carousel extends React.Component<CarouselProps, {}> {
   static defaultProps = {
     dots: true,
     arrows: false,
-    prefixCls: 'ant-carousel',
+    prefixCls: 'mk-carousel',
     draggable: false,
   };
 

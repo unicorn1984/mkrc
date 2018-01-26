@@ -26,7 +26,7 @@ export interface ListItemMetaProps {
 
 export const Meta = (props: ListItemMetaProps) => {
   const {
-    prefixCls = 'ant-list',
+    prefixCls = 'mk-list',
     className,
     avatar,
     title,

@@ -56,7 +56,7 @@ const splitObject = (obj: any, keys: string[]) => {
 
 export default class Tooltip extends React.Component<TooltipProps, any> {
   static defaultProps = {
-    prefixCls: 'ant-tooltip',
+    prefixCls: 'mk-tooltip',
     placement: 'top',
     transitionName: 'zoom-big-fast',
     mouseEnterDelay: 0.1,

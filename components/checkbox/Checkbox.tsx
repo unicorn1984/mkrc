@@ -28,7 +28,7 @@ export interface CheckboxProps extends AbstractCheckboxProps {
 export default class Checkbox extends React.Component<CheckboxProps, {}> {
   static Group: typeof CheckboxGroup;
   static defaultProps = {
-    prefixCls: 'ant-checkbox',
+    prefixCls: 'mk-checkbox',
     indeterminate: false,
   };
 

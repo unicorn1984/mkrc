@@ -39,7 +39,7 @@ export default class AutoComplete extends React.Component<AutoCompleteProps, {}>
   static OptGroup = OptGroup as React.ClassicComponentClass<OptGroupProps>;
 
   static defaultProps = {
-    prefixCls: 'ant-select',
+    prefixCls: 'mk-select',
     transitionName: 'slide-up',
     optionLabelProp: 'children',
     choiceTransitionName: 'zoom',

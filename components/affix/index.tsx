@@ -247,7 +247,7 @@ export default class Affix extends React.Component<AffixProps, AffixState> {
 
   render() {
     const className = classNames({
-      [this.props.prefixCls || 'ant-affix']: this.state.affixStyle,
+      [this.props.prefixCls || 'mk-affix']: this.state.affixStyle,
     });
 
     const props = omit(this.props, ['prefixCls', 'offsetTop', 'offsetBottom', 'target', 'onChange']);

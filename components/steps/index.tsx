@@ -16,8 +16,8 @@ export default class Steps extends React.Component<StepsProps, any> {
   static Step = RcSteps.Step;
 
   static defaultProps = {
-    prefixCls: 'ant-steps',
-    iconPrefix: 'ant',
+    prefixCls: 'mk-steps',
+    iconPrefix: 'mk',
     current: 0,
   };
 

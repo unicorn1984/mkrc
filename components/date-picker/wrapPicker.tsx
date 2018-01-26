@@ -35,8 +35,8 @@ export default function wrapPicker(Picker: React.ComponentClass<any>, defaultFor
       onOpenChange() {
       },
       locale: {},
-      prefixCls: 'ant-calendar',
-      inputPrefixCls: 'ant-input',
+      prefixCls: 'mk-calendar',
+      inputPrefixCls: 'mk-input',
     };
 
     private picker: any;

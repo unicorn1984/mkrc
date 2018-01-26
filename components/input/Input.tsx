@@ -53,7 +53,7 @@ export default class Input extends React.Component<InputProps, any> {
   static TextArea: typeof TextArea;
 
   static defaultProps = {
-    prefixCls: 'ant-input',
+    prefixCls: 'mk-input',
     type: 'text',
     disabled: false,
   };

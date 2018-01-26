@@ -74,7 +74,7 @@ export default class Table<T> extends React.Component<TableProps<T>, TableState<
 
   static defaultProps = {
     dataSource: [],
-    prefixCls: 'ant-table',
+    prefixCls: 'mk-table',
     useFixedHeader: false,
     rowSelection: null,
     className: '',
@@ -948,7 +948,6 @@ export default class Table<T> extends React.Component<TableProps<T>, TableState<
         className={classString}
         expandIconColumnIndex={expandIconColumnIndex}
         expandIconAsCell={expandIconAsCell}
-        emptyText={locale.emptyText}
       />
     );
   }

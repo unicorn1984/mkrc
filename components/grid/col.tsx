@@ -49,7 +49,7 @@ export default class Col extends React.Component<ColProps, {}> {
 
   render() {
     const props: any = this.props;
-    const { span, order, offset, push, pull, className, children, prefixCls = 'ant-col', ...others } = props;
+    const { span, order, offset, push, pull, className, children, prefixCls = 'mk-col', ...others } = props;
     let sizeClassObj = {};
     ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'].forEach(size => {
       let sizeProps: ColSize = {};

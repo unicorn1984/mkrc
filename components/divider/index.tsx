@@ -11,7 +11,7 @@ export interface DividerProps {
 }
 
 export default function Divider({
-  prefixCls = 'ant',
+  prefixCls = 'mk',
   type = 'horizontal',
   className,
   children,

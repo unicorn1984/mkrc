@@ -32,7 +32,7 @@ export interface FormItemContext {
 export default class FormItem extends React.Component<FormItemProps, any> {
   static defaultProps = {
     hasFeedback: false,
-    prefixCls: 'ant-form',
+    prefixCls: 'mk-form',
     colon: true,
   };
 

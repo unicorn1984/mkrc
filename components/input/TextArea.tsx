@@ -37,7 +37,7 @@ export type HTMLTextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement
 
 export default class TextArea extends React.Component<TextAreaProps & HTMLTextareaProps, TextAreaState> {
   static defaultProps = {
-    prefixCls: 'ant-input',
+    prefixCls: 'mk-input',
   };
 
   nextFrameActionId: number;

@@ -19,7 +19,7 @@ export interface SwitchProps {
 
 export default class Switch extends React.Component<SwitchProps, {}> {
   static defaultProps = {
-    prefixCls: 'ant-switch',
+    prefixCls: 'mk-switch',
   };
 
   static propTypes = {

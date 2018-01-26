@@ -1,9 +1,9 @@
 {
-  "name": "antd",
-  "version": "3.1.4",
-  "title": "Ant Design",
-  "description": "An enterprise-class UI design language and React-based implementation",
-  "homepage": "http://ant.design/",
+  "name": "mk",
+  "version": "0.1.0",
+  "title": "Mkrc",
+  "description": "maycur react component UI",
+  "homepage": "http://maycur.com/",
   "keywords": [
     "ant",
     "design",
@@ -16,7 +16,7 @@
     "frontend"
   ],
   "contributors": [
-    "ant"
+    "mk"
   ],
   "repository": {
     "type": "git",

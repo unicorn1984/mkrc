@@ -56,7 +56,7 @@ export default class FilterMenu<T> extends React.Component<FilterMenuProps<T>, F
 
   setNeverShown = (column: ColumnProps<T>) => {
     const rootNode = ReactDOM.findDOMNode(this);
-    const filterBelongToScrollBody = !!closest(rootNode, `.ant-table-scroll`);
+    const filterBelongToScrollBody = !!closest(rootNode, `.mk-table-scroll`);
     if (filterBelongToScrollBody) {
       // When fixed column have filters, there will be two dropdown menus
       // Filter dropdown menu inside scroll body should never be shown

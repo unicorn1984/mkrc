@@ -49,7 +49,7 @@ function isEmptyArray(arr: any) {
 
 export default class RangePicker extends React.Component<any, RangePickerState> {
   static defaultProps = {
-    prefixCls: 'ant-calendar',
+    prefixCls: 'mk-calendar',
     allowClear: true,
     showToday: false,
   };

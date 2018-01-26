@@ -15,11 +15,11 @@ export default class TreeSelect extends React.Component<TreeSelectProps, any> {
   static SHOW_CHILD = SHOW_CHILD;
 
   static defaultProps = {
-    prefixCls: 'ant-select',
+    prefixCls: 'mk-select',
     transitionName: 'slide-up',
     choiceTransitionName: 'zoom',
     showSearch: false,
-    dropdownClassName: 'ant-select-tree-dropdown',
+    dropdownClassName: 'mk-select-tree-dropdown',
   };
 
   private rcTreeSelect: any;

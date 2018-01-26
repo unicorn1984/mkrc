@@ -7,7 +7,7 @@ export type RadioButtonProps = AbstractCheckboxProps;
 
 export default class RadioButton extends React.Component<RadioButtonProps, any> {
   static defaultProps = {
-    prefixCls: 'ant-radio-button',
+    prefixCls: 'mk-radio-button',
   };
 
   static contextTypes = {

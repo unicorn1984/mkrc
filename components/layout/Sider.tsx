@@ -68,7 +68,7 @@ export default class Sider extends React.Component<SiderProps, SliderState> {
   static __ANT_LAYOUT_SIDER: any = true;
 
   static defaultProps = {
-    prefixCls: 'ant-layout-sider',
+    prefixCls: 'mk-layout-sider',
     collapsible: false,
     defaultCollapsed: false,
     reverseArrow: false,

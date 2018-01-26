@@ -4,7 +4,7 @@ import List from '../list';
 import Checkbox from '../../checkbox';
 
 const listCommonProps = {
-  prefixCls: 'ant-transfer-list',
+  prefixCls: 'mk-transfer-list',
   dataSource: [{
     key: 'a',
     title: 'a',

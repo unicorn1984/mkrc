@@ -89,7 +89,7 @@ export default class Anchor extends React.Component<AnchorProps, any> {
   static Link: typeof AnchorLink;
 
   static defaultProps = {
-    prefixCls: 'ant-anchor',
+    prefixCls: 'mk-anchor',
     affix: true,
     showInkInFixed: false,
   };

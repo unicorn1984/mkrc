@@ -33,8 +33,8 @@ export type PaginationLocale = any;
 
 export default class Pagination extends React.Component<PaginationProps, {}> {
   static defaultProps = {
-    prefixCls: 'ant-pagination',
-    selectPrefixCls: 'ant-select',
+    prefixCls: 'mk-pagination',
+    selectPrefixCls: 'mk-select',
   };
 
   renderPagination = (locale: PaginationLocale) => {

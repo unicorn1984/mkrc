@@ -54,7 +54,7 @@ export interface TimePickerLocale {
 
 export default class TimePicker extends React.Component<TimePickerProps, any> {
   static defaultProps = {
-    prefixCls: 'ant-time-picker',
+    prefixCls: 'mk-time-picker',
     align: {
       offset: [0, -2],
     },
