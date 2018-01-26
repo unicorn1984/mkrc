@@ -1,9 +1,9 @@
 ---
 order: 0
-title: Ant Design of React
+title: Component of React
 ---
 
-这里是 Ant Design 的 React 实现，开发和服务于企业级后台产品。
+这里是 Maycur Component 的 React 实现，开发和服务于企业级后台产品。
 
 <div class="pic-plus">
   <img width="160" src="https://t.alipayobjects.com/images/rmsweb/T16xRhXkxbXXXXXXXX.svg">
@@ -37,11 +37,7 @@ title: Ant Design of React
 **我们推荐使用 npm 或 yarn 的方式进行开发**，不仅可在开发环境轻松调试，也可放心地在生产环境打包部署使用，享受整个生态圈和工具链带来的诸多好处。
 
 ```bash
-$ npm install antd --save
-```
-
-```bash
-$ yarn add antd
+$ npm install mkrc --save
 ```
 
 如果你的网络环境不佳，推荐使用 [cnpm](https://github.com/cnpm/cnpm)。
