@@ -14,7 +14,7 @@ title:
 Cascade selection box of different sizes.
 
 ````jsx
-import { Cascader } from 'antd';
+import { Cascader } from 'mkrc';
 
 const options = [{
   value: 'zhejiang',

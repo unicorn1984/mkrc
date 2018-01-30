@@ -18,7 +18,7 @@ title:
 > it is an absolute controlled component and has no uncontrolled mode.
 
 ````jsx
-import { Tag } from 'antd';
+import { Tag } from 'mkrc';
 const { CheckableTag } = Tag;
 
 class MyTag extends React.Component {

@@ -14,7 +14,7 @@ title:
 Grid style card content.
 
 ````jsx
-import { Card } from 'antd';
+import { Card } from 'mkrc';
 
 const gridStyle = {
   width: '25%',

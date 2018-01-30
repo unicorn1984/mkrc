@@ -14,7 +14,7 @@ title:
 Classic page layouts.
 
 ````jsx
-import { Layout } from 'antd';
+import { Layout } from 'mkrc';
 const { Header, Footer, Sider, Content } = Layout;
 
 ReactDOM.render(

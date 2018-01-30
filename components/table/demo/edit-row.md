@@ -14,7 +14,7 @@ title:
 Table with editable rows.
 
 ````jsx
-import { Table, Input, Popconfirm } from 'antd';
+import { Table, Input, Popconfirm } from 'mkrc';
 
 const data = [];
 for (let i = 0; i < 100; i++) {

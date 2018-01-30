@@ -14,7 +14,7 @@ title:
 Change the suggestions placement.
 
 ````jsx
-import { Mention } from 'antd';
+import { Mention } from 'mkrc';
 const { toString } = Mention;
 
 function onChange(contentState) {

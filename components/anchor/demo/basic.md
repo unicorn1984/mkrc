@@ -14,7 +14,7 @@ title:
 The simplest usage.
 
 ```jsx
-import { Anchor } from 'antd';
+import { Anchor } from 'mkrc';
 const { Link } = Anchor;
 
 ReactDOM.render(

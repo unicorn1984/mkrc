@@ -6,7 +6,7 @@ import { FormattedMessage } from 'react-intl';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import classNames from 'classnames';
 import LZString from 'lz-string';
-import { Icon, Tooltip } from 'antd';
+import { Icon, Tooltip } from 'mkrc';
 import EditButton from './EditButton';
 import BrowserFrame from '../BrowserFrame';
 import { ping } from '../utils';

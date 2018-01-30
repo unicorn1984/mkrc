@@ -14,8 +14,8 @@ title:
 Wrap your app with `LocaleProvider`, and apply the corresponding language package.
 
 ````jsx
-import { Pagination, LocaleProvider } from 'antd';
-import enUS from 'antd/lib/locale-provider/en_US';
+import { Pagination, LocaleProvider } from 'mkrc';
+import enUS from 'mkrc/lib/locale-provider/en_US';
 
 const App = () => (
   <div>

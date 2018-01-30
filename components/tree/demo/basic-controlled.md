@@ -14,7 +14,7 @@ title:
 basic controlled example
 
 ````jsx
-import { Tree } from 'antd';
+import { Tree } from 'mkrc';
 const TreeNode = Tree.TreeNode;
 
 const treeData = [{

@@ -14,7 +14,7 @@ title:
 Implement a customized column search example via `filterDropdown`, `filterDropdownVisible` and `filterDropdownVisibleChange`.
 
 ````jsx
-import { Table, Input, Button, Icon } from 'antd';
+import { Table, Input, Button, Icon } from 'mkrc';
 
 const data = [{
   key: '1',

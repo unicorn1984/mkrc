@@ -19,7 +19,7 @@ Using the [Cascader](/components/cascader) component is strongly recommended ins
 
 
 ````jsx
-import { Select } from 'antd';
+import { Select } from 'mkrc';
 const Option = Select.Option;
 
 const provinceData = ['Zhejiang', 'Jiangsu'];

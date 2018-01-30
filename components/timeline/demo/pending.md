@@ -14,7 +14,7 @@ title:
 When the timeline is incomplete and ongoing, put a ghost node at last. set `pending={true}` or `pending={a React Element}`. Used in ascend chronological order.
 
 ````jsx
-import { Timeline } from 'antd';
+import { Timeline } from 'mkrc';
 
 ReactDOM.render(
   <Timeline pending="Recording...">

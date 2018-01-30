@@ -1,5 +1,5 @@
 import React from 'react';
-import { message } from 'antd';
+import { message } from 'mkrc';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
 const rgbToHex = (rgbString) => {

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'bisheng/router';
 import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
-import { Menu, Row, Col } from 'antd';
+import { Menu, Row, Col } from 'mkrc';
 import * as utils from '../utils';
 
 export default class Header extends React.Component {

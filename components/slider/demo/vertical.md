@@ -14,7 +14,7 @@ title:
 The vertical Slider.
 
 ````jsx
-import { Slider } from 'antd';
+import { Slider } from 'mkrc';
 
 const style = {
   float: 'left',

@@ -14,7 +14,7 @@ title:
 Steps with progress dot style.
 
 ````jsx
-import { Steps } from 'antd';
+import { Steps } from 'mkrc';
 const Step = Steps.Step;
 
 ReactDOM.render(

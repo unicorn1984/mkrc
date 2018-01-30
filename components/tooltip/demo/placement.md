@@ -14,7 +14,7 @@ title:
 The ToolTip has 12 placements choice.
 
 ````jsx
-import { Tooltip, Button } from 'antd';
+import { Tooltip, Button } from 'mkrc';
 
 const text = <span>prompt text</span>;
 

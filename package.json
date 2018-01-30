@@ -1,11 +1,11 @@
 {
-  "name": "mk",
+  "name": "mkrc",
   "version": "0.1.0",
-  "title": "Mkrc",
+  "title": "mkrc",
   "description": "maycur react component UI",
   "homepage": "http://maycur.com/",
   "keywords": [
-    "ant",
+    "mkrc",
     "design",
     "react",
     "react-component",

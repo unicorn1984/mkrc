@@ -14,7 +14,7 @@ title:
 Basic usage.
 
 ````jsx
-import { Mention } from 'antd';
+import { Mention } from 'mkrc';
 const { toString, toContentState } = Mention;
 
 function onChange(contentState) {

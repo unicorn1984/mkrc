@@ -14,7 +14,7 @@ title:
 This property provide an additional time selection. When `showTime` is an Object, its properties will be passed on to built-in `TimePicker`.
 
 ````jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'mkrc';
 const { RangePicker } = DatePicker;
 
 function onChange(value, dateString) {
