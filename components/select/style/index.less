@@ -216,6 +216,15 @@
     }
   }
 
+  // custom
+  &-li {
+    .@{select-prefix-cls}-selection {
+      border: 0;
+      border-bottom: @border-width-base @border-style-base @border-color-base;
+      border-radius: 0;
+    }
+  }
+
   &-disabled &-selection__choice__remove {
     color: @disabled-color;
     cursor: default;

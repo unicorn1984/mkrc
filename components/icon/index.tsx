@@ -14,9 +14,9 @@ export interface IconProps {
 const Icon = (props: IconProps) => {
   const { type, className = '', spin } = props;
   const classString = classNames({
-    anticon: true,
-    'mkicon-spin': !!spin || type === 'loading',
-    [`mkicon-${type}`]: true,
+    mkicon: true, // custom
+    'mkicon-spin': !!spin || type === 'loading',  // custom
+    [`mkicon-${type}`]: true,  // custom
   }, className);
   return <i {...omit(props, ['type', 'spin'])} className={classString} />;
 };

@@ -33,7 +33,7 @@
     text-align: left;
     color: @heading-color;
     font-weight: 500;
-    border-bottom: @border-width-base @border-style-base @border-color-split;
+    border-bottom: @border-width-base @border-style-base @table-header-bottom-border-color; // custom
 
     &[colspan] {
       text-align: center;
@@ -150,6 +150,12 @@
   &-tbody > tr > td {
     padding: @table-padding-vertical @table-padding-horizontal;
     word-break: break-all;
+    &:first-child {
+      padding-left: @table-ends-padding;
+    }
+    &:last-child {
+      padding-right: @table-ends-padding;
+    }
   }
 
   &-thead > tr > th.@{table-prefix-cls}-selection-column-custom {

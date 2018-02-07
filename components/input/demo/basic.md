@@ -16,5 +16,10 @@ Basic usage example.
 ````jsx
 import { Input } from 'mkrc';
 
-ReactDOM.render(<Input placeholder="Basic usage" />, mountNode);
+ReactDOM.render(
+  <div className="example-input">
+    <Input placeholder="Basic usage" />
+    <Input placeholder="Basic usage" theme="surround" />
+  </div>
+, mountNode);
 ````

@@ -16,10 +16,10 @@
   .reset-form;
 }
 
-.@{form-prefix-cls}-item-required:before {
+.@{form-prefix-cls}-item-required:after { // custom
   display: inline-block;
   margin-right: 4px;
-  content: "*";
+  content: "*" !important;
   font-family: SimSun;
   line-height: 1;
   font-size: @font-size-base;
@@ -102,17 +102,14 @@ input[type="checkbox"] {
 
     label {
       color: @label-color;
-
+      //custom
       &:after {
-        & when (@form-item-trailing-colon=true) {
-          content: ":";
-        }
-        & when not (@form-item-trailing-colon=true) {
-          content: " ";
-        }
-        margin: 0 8px 0 2px;
+        content: " ";
+        margin: 0 2px 0 2px;
         position: relative;
         top: -0.5px;
+        min-width: 8px;
+        display: inline-block;
       }
     }
   }
@@ -291,10 +288,10 @@ form {
   display: block;
   text-align: left;
   line-height: @line-height-base;
-
-  label:after {
+  //custom
+  /*label:after {
     display: none;
-  }
+  }*/
 }
 
 .make-vertical-layout() {

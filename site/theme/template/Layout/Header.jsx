@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'bisheng/router';
 import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
-import { Menu, Row, Col } from 'mkrc';
+import { Menu, Row, Col, Button } from 'mkrc';
 import * as utils from '../utils';
 
 export default class Header extends React.Component {
@@ -13,6 +13,21 @@ export default class Header extends React.Component {
   }
 
   componentDidMount() {
+  }
+
+  handleLangChange = () => {
+    const { pathname } = this.props.location;
+    const currentProtocol = `${window.location.protocol}//`;
+    const currentHref = window.location.href.substr(currentProtocol.length);
+
+    if (utils.isLocalStorageNameSupported()) {
+      localStorage.setItem('locale', utils.isZhCN(pathname) ? 'en-US' : 'zh-CN');
+    }
+
+    window.location.href = currentProtocol + currentHref.replace(
+      window.location.pathname,
+      utils.getLocalizedPathname(pathname, !utils.isZhCN(pathname)),
+    );
   }
 
   render() {
@@ -34,6 +49,9 @@ export default class Header extends React.Component {
     });
 
     const menu = [
+      <Button ghost size="small" onClick={this.handleLangChange} className="header-lang-button" key="lang-button">
+        <FormattedMessage id="app.header.lang" />
+      </Button>,
       <Menu className="menu-site" mode={menuMode} selectedKeys={[activeMenuItem]} id="nav" key="nav">
         <Menu.Item key="home">
           <Link to={utils.getLocalizedPathname('/', isZhCN)}>

@@ -14,13 +14,19 @@
   padding: @input-padding-vertical-sm @input-padding-horizontal-sm;
   height: @input-height-sm;
 }
+// custom
+.input-li() {
+  border: 0;
+  border-bottom: @border-width-base @border-style-base @input-border-color;
+  border-radius: 0;
+}
 
 // input status
 // == when focus or actived
 .active(@color: @outline-color) {
   border-color: ~`colorPalette("@{color}", 5)`;
   outline: 0;
-  box-shadow: 0 0 @outline-blur-size @outline-width fade(@color, 20%);
+  //box-shadow: 0 0 @outline-blur-size @outline-width fade(@color, 20%); // custom
 }
 
 // == when hoverd
@@ -83,6 +89,11 @@
 
   &-sm {
     .input-sm();
+  }
+
+  //theme
+  &-li {
+    .input-li();
   }
 }
 

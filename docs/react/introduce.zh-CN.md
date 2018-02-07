@@ -42,28 +42,17 @@ $ npm install mkrc --save
 
 如果你的网络环境不佳，推荐使用 [cnpm](https://github.com/cnpm/cnpm)。
 
-### 浏览器引入
-
-在浏览器中使用 `script` 和 `link` 标签直接引入文件，并使用全局变量 `antd`。
-
-我们在 npm 发布包内的 `antd/dist` 目录下提供了 `antd.js` `antd.css` 以及 `antd.min.js` `antd.min.css`。你也可以通过 [![CDNJS](https://img.shields.io/cdnjs/v/antd.svg?style=flat-square)](https://cdnjs.com/libraries/antd)
- 或 [UNPKG](https://unpkg.com/antd/dist/) 进行下载。
-
-> **强烈不推荐使用已构建文件**，这样无法按需加载，而且难以获得底层依赖模块的 bug 快速修复支持。
-
-> 注意：3.0 之后引入 antd.js 前你需要自行引入 [moment](http://momentjs.com/)。
-
 ## 示例
 
 ```jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'mkrc';
 ReactDOM.render(<DatePicker />, mountNode);
 ```
 
 引入样式：
 
 ```jsx
-import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
+import 'antd/dist/mkrc.css';  // or 'mkrc/dist/mkrc.less'
 ```
 
 ### 按需加载
@@ -76,24 +65,24 @@ import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
    // .babelrc or babel-loader option
    {
      "plugins": [
-       ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }] // `style: true` 会加载 less 文件
+       ["import", { "libraryName": "mkrc", "libraryDirectory": "es", "style": "css" }] // `style: true` 会加载 less 文件
      ]
    }
    ```
 
    > 注意：webpack 1 无需设置 `libraryDirectory`。
 
-   然后只需从 antd 引入模块即可，无需单独引入样式。等同于下面手动引入的方式。
+   然后只需从 mkrc 引入模块即可，无需单独引入样式。等同于下面手动引入的方式。
 
    ```jsx
    // babel-plugin-import 会帮助你加载 JS 和 CSS
-   import { DatePicker } from 'antd';
+   import { DatePicker } from 'mkrc';
    ```
 
 - 手动引入
 
    ```jsx
-   import DatePicker from 'antd/lib/date-picker';  // 加载 JS
-   import 'antd/lib/date-picker/style/css';        // 加载 CSS
-   // import 'antd/lib/date-picker/style';         // 加载 LESS
+   import DatePicker from 'mkrc/lib/date-picker';  // 加载 JS
+   import 'mkrc/lib/date-picker/style/css';        // 加载 CSS
+   // import 'mkrc/lib/date-picker/style';         // 加载 LESS
    ```

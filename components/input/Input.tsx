@@ -28,6 +28,7 @@ export interface InputProps extends AbstractInputProps {
   id?: number | string;
   name?: string;
   size?: 'large' | 'default' | 'small';
+  theme?: 'default' | 'surround'; // custom
   maxLength?: number | string;
   disabled?: boolean;
   readOnly?: boolean;
@@ -65,6 +66,7 @@ export default class Input extends React.Component<InputProps, any> {
       PropTypes.number,
     ]),
     size: PropTypes.oneOf(['small', 'default', 'large']),
+    theme: PropTypes.oneOf(['default', 'surround']), // custom
     maxLength: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number,
@@ -107,11 +109,13 @@ export default class Input extends React.Component<InputProps, any> {
   }
 
   getInputClassName() {
-    const { prefixCls, size, disabled } = this.props;
+    const { prefixCls, size, disabled, theme } = this.props;
     return classNames(prefixCls, {
       [`${prefixCls}-sm`]: size === 'small',
       [`${prefixCls}-lg`]: size === 'large',
       [`${prefixCls}-disabled`]: disabled,
+    }, {
+      [`${prefixCls}-li`]: !theme || theme === 'default',
     });
   }
 

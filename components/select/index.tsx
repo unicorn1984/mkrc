@@ -9,6 +9,7 @@ export interface AbstractSelectProps {
   prefixCls?: string;
   className?: string;
   size?: 'default' | 'large' | 'small';
+  theme?: 'surround' | 'default'; // custom
   notFoundContent?: React.ReactNode | null;
   transitionName?: string;
   choiceTransitionName?: string;
@@ -73,6 +74,7 @@ const SelectPropTypes = {
   prefixCls: PropTypes.string,
   className: PropTypes.string,
   size: PropTypes.oneOf(['default', 'large', 'small']),
+  theme: PropTypes.oneOf(['default', 'surround']), // custom
   combobox: PropTypes.bool,
   notFoundContent: PropTypes.any,
   showSearch: PropTypes.bool,
@@ -127,11 +129,14 @@ export default class Select extends React.Component<SelectProps, {}> {
       className = '',
       size,
       mode,
+      theme,
       ...restProps,
     } = this.props;
     const cls = classNames({
       [`${prefixCls}-lg`]: size === 'large',
       [`${prefixCls}-sm`]: size === 'small',
+    }, {
+      [`${prefixCls}-li`]: !theme || theme === 'default',
     }, className);
 
     let { optionLabelProp } = this.props;

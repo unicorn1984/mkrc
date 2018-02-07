@@ -14,7 +14,9 @@ title:
 There are three layout for form: `horizontal`, `vertical`, `inline`.
 
 ````jsx
+
 import { Form, Input, Button, Radio } from 'mkrc';
+
 const FormItem = Form.Item;
 
 class FormLayoutDemo extends React.Component {
@@ -24,10 +26,21 @@ class FormLayoutDemo extends React.Component {
       formLayout: 'horizontal',
     };
   }
+  handleSubmit = (e) => {
+    e.preventDefault();
+      this.props.form.validateFields((err, values) => {
+        if (!err) {
+          console.log('Received values of form: ', values);
+        }
+      });
+  }
+
   handleFormLayoutChange = (e) => {
     this.setState({ formLayout: e.target.value });
   }
+
   render() {
+    const { getFieldDecorator } = this.props.form;
     const { formLayout } = this.state;
     const formItemLayout = formLayout === 'horizontal' ? {
       labelCol: { span: 4 },
@@ -38,7 +51,7 @@ class FormLayoutDemo extends React.Component {
     } : null;
     return (
       <div>
-        <Form layout={formLayout}>
+        <Form layout={formLayout} onSubmit={this.handleSubmit}>
           <FormItem
             label="Form Layout"
             {...formItemLayout}
@@ -53,16 +66,34 @@ class FormLayoutDemo extends React.Component {
             label="Field A"
             {...formItemLayout}
           >
-            <Input placeholder="input placeholder" />
+            {getFieldDecorator('fieldA', {
+              rules: [{ required: true, message: 'Please input your note!' }],
+            })(
+              <Input placeholder="input placeholder" />
+            )}
           </FormItem>
           <FormItem
             label="Field B"
             {...formItemLayout}
           >
-            <Input placeholder="input placeholder" />
+            {getFieldDecorator('fieldB', {
+              rules: [{ required: true, message: 'Please input your note!' }],
+            })(
+              <Input placeholder="input placeholder" />
+            )}
+          </FormItem>
+          <FormItem
+            label="Field C"
+            {...formItemLayout}
+          >
+            {getFieldDecorator('fieldc', {
+              rules: [],
+                })(
+                  <Input placeholder="input placeholder" />
+                  )}
           </FormItem>
           <FormItem {...buttonItemLayout}>
-            <Button type="primary">Submit</Button>
+            <Button type="primary" htmlType="submit">Submit</Button>
           </FormItem>
         </Form>
       </div>
@@ -70,5 +101,6 @@ class FormLayoutDemo extends React.Component {
   }
 }
 
-ReactDOM.render(<FormLayoutDemo />, mountNode);
+const WrappedFormLayoutDemo = Form.create()(FormLayoutDemo);
+ReactDOM.render(<WrappedFormLayoutDemo />, mountNode);
 ````
