@@ -19,6 +19,7 @@ import { Input } from 'mkrc';
 ReactDOM.render(
   <div className="example-input">
     <Input placeholder="Basic usage" />
+    <br /><br />
     <Input placeholder="Basic usage" theme="surround" />
   </div>
 , mountNode);

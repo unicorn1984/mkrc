@@ -128,6 +128,7 @@ class SearchTree extends React.Component {
         <Search style={{ marginBottom: 8 }} placeholder="Search" onChange={this.onChange} />
         <Tree
           onExpand={this.onExpand}
+          showIcon="true"
           expandedKeys={expandedKeys}
           autoExpandParent={autoExpandParent}
         >

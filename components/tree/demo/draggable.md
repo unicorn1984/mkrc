@@ -117,6 +117,7 @@ class Demo extends React.Component {
     });
     return (
       <Tree
+        showIcon="true"
         className="draggable-tree"
         defaultExpandedKeys={this.state.expandedKeys}
         draggable

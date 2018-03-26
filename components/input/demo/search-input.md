@@ -18,12 +18,13 @@ ReactDOM.render(
     />
     <br /><br />
     <Search
+      theme="surround"
       placeholder="input search text"
       onSearch={value => console.log(value)}
       enterButton
     />
     <br /><br />
-    <Search placeholder="input search text" enterButton="Search" size="large" />
+    <Search theme="surround" placeholder="input search text" enterButton="Search" size="large" />
   </div>
 , mountNode);
 ````

@@ -8,6 +8,7 @@ export interface SearchProps extends InputProps {
   inputPrefixCls?: string;
   onSearch?: (value: string) => any;
   enterButton?: boolean | React.ReactNode;
+  theme?: 'default' | 'surround'; // custom
 }
 
 export default class Search extends React.Component<SearchProps, any> {
@@ -40,7 +41,7 @@ export default class Search extends React.Component<SearchProps, any> {
   }
 
   render() {
-    const { className, prefixCls, inputPrefixCls, size, enterButton, suffix, ...others } = this.props;
+    const { className, prefixCls, inputPrefixCls, size, enterButton, suffix, theme, ...others } = this.props;
     delete (others as any).onSearch;
     const buttonOrIcon = enterButton
       ? (
@@ -58,12 +59,14 @@ export default class Search extends React.Component<SearchProps, any> {
     const inputClassName = classNames(prefixCls, className, {
       [`${prefixCls}-enter-button`]: !!enterButton,
       [`${prefixCls}-${size}`]: !!size,
+      [`${prefixCls}-sr`]: theme === 'surround',
     });
     return (
       <Input
         onPressEnter={this.onSearch}
         {...others}
         size={size}
+        theme={theme}
         className={inputClassName}
         prefixCls={inputPrefixCls}
         suffix={searchSuffix}

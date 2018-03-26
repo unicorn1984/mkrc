@@ -35,12 +35,6 @@ toc: false
 
 > 点击图标复制代码。
 
-### 方向性图标
-
-```__react
-import IconSet from 'site/theme/template/IconSet';
-ReactDOM.render(<IconSet className="icons" catigory="direction" />, mountNode);
-```
 
 ### 提示建议性图标
 
@@ -53,16 +47,22 @@ ReactDOM.render(<IconSet className="icons" catigory="suggestion" />, mountNode);
 
 ```__react
 import IconSet from 'site/theme/template/IconSet';
-ReactDOM.render(<IconSet className="icons" catigory="other" />, mountNode);
+ReactDOM.render(<IconSet className="icons" catigory="normal" />, mountNode);
 ```
 
 ### 品牌和标识
 
 ```__react
 import IconSet from 'site/theme/template/IconSet';
-ReactDOM.render(<IconSet className="icons" catigory="logo" />, mountNode);
+ReactDOM.render(<IconSet className="icons" catigory="brand" />, mountNode);
 ```
 
+### 业务图标
+
+```__react
+import IconSet from 'site/theme/template/IconSet';
+ReactDOM.render(<IconSet className="icons" catigory="biz" />, mountNode);
+```
 ## API
 
 由于图标字体本质上还是文字，可以使用 `style` 和 `className` 设置图标的大小和颜色。

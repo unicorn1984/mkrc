@@ -57,7 +57,7 @@ class Demo extends React.Component {
   }
   render() {
     return (
-      <Tree loadData={this.onLoadData}>
+      <Tree loadData={this.onLoadData} showIcon="true">
         {this.renderTreeNodes(this.state.treeData)}
       </Tree>
     );

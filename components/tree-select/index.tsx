@@ -50,6 +50,7 @@ export default class TreeSelect extends React.Component<TreeSelectProps, any> {
       prefixCls,
       className,
       size,
+      theme,
       notFoundContent,
       dropdownStyle,
       ...restProps,
@@ -58,6 +59,8 @@ export default class TreeSelect extends React.Component<TreeSelectProps, any> {
     const cls = classNames({
       [`${prefixCls}-lg`]: size === 'large',
       [`${prefixCls}-sm`]: size === 'small',
+    }, {
+      [`${prefixCls}-li`]: !theme || theme === 'default',
     }, className);
 
     let checkable = restProps.treeCheckable;

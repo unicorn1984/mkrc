@@ -25,6 +25,7 @@ ReactDOM.render(
     <Input size="large" placeholder="large size" />
     <Input placeholder="default size" />
     <Input size="small" placeholder="small size" />
+    <br /><br />
     <Input size="large" placeholder="large size" theme="surround" />
     <Input placeholder="default size" theme="surround" />
     <Input size="small" placeholder="small size" theme="surround" />

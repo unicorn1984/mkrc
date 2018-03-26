@@ -30,4 +30,16 @@
   &.@{search-prefix}-enter-button > .@{ant-prefix}-input-suffix {
     right: 0;
   }
+  // custom
+  &:not(&-sr) {
+    input {
+      background-color: @search-background-color;
+      border-color: @search-background-color;
+      border-radius: @border-radius-base;
+      &:hover,
+      &:focus {
+       border-color: @search-background-color !important;
+      }
+    }
+  }
 }
