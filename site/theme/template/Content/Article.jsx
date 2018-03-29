@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import DocumentTitle from 'react-document-title';
 import { getChildren } from 'jsonml.js/lib/utils';
-import { Timeline, Alert, Affix } from 'mkrc';
+import { Timeline, Alert } from 'mkrc';
 import delegate from 'delegate';
 import EditButton from './EditButton';
 import { ping } from '../utils';
@@ -99,16 +99,6 @@ export default class Article extends React.Component {
               props.utils.toReactComponent(
                 ['section', { className: 'markdown' }].concat(getChildren(description))
               )
-          }
-          {
-            (!content.toc || content.toc.length <= 1 || meta.toc === false) ? null :
-            <Affix className="toc-affix" offsetTop={16}>
-              {
-                props.utils.toReactComponent(
-                  ['ul', { className: 'toc' }].concat(getChildren(content.toc))
-                )
-              }
-            </Affix>
           }
           {
             this.getArticle(props.utils.toReactComponent(

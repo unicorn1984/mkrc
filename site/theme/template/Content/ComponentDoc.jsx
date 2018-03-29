@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import DocumentTitle from 'react-document-title';
 import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
-import { Row, Col, Icon, Affix } from 'mkrc';
+import { Row, Col, Icon } from 'mkrc';
 import { getChildren } from 'jsonml.js/lib/utils';
 import Demo from './Demo';
 import EditButton from './EditButton';
@@ -62,27 +62,10 @@ export default class ComponentDoc extends React.Component {
       'code-box-expand-trigger-active': expand,
     });
 
-    const jumper = showedDemo.map((demo) => {
-      const { title } = demo.meta;
-      const localizeTitle = title[locale] || title;
-      return (
-        <li key={demo.meta.id} title={localizeTitle}>
-          <a href={`#${demo.meta.id}`}>
-            {localizeTitle}
-          </a>
-        </li>
-      );
-    });
-
     const { title, subtitle, filename } = meta;
     return (
       <DocumentTitle title={`${subtitle || ''} ${title[locale] || title} - Ant Design`}>
         <article>
-          <Affix className="toc-affix" offsetTop={16}>
-            <ul id="demo-toc" className="toc">
-              {jumper}
-            </ul>
-          </Affix>
           <section className="markdown">
             <h1>
               {title[locale] || title}

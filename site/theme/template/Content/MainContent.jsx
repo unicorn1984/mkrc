@@ -92,15 +92,6 @@ export default class MainContent extends React.Component {
       .setup({
         step: '.markdown > h2, .code-box', // required
         offset: 0,
-      })
-      .onStepEnter(({ element }) => {
-        [].forEach.call(document.querySelectorAll('.toc-affix li a'), (node) => {
-          node.className = '';
-        });
-        const currentNode = document.querySelectorAll(`.toc-affix li a[href="#${element.id}"]`)[0];
-        if (currentNode) {
-          currentNode.className = 'current';
-        }
       });
   }
 

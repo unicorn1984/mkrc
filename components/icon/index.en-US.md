@@ -1,77 +1,78 @@
 ---
 category: Components
+subtitle: 图标
 type: General
 title: Icon
 toc: false
 ---
 
-Semantic vector graphics.
+语义化的矢量图形。
 
-## Icons naming convention
+## 图标的命名规范
 
-We provide semantic name for every icon, and naming rules are as follows:
+我们为每个图标赋予了语义化的命名，命名规则如下:
 
-- Scanning line icon has the similar name with its solid one，but it's distinguished by `-o`, for example, `question-circle` (a full circle) and `question-circle-o` (an empty circle);
-- Naming sequence：`[name]-[shape?]-[outline?]-[direction?]`.
+- 实心和描线图标保持同名，用 `-o` 来区分，比如 `question-circle`（实心） 和 `question-circle-o`（描线）；
+- 命名顺序：`[图标名]-[形状?]-[描线?]-[方向?]`。
 
-> `?` means is optional.
+> `?` 为可选。
 
-See more design detail at [here](/docs/spec/icon).
+完整的图标设计规范请访问 [图标规范](/docs/spec/icon)。
 
-## How To Use
+## 如何使用
 
-Use tag <Icon /> to create an icon and set its type in the type prop, for example:
+使用 `<Icon />` 标签声明组件，指定图标对应的 type 属性，示例代码如下:
 
 ```html
 <Icon type="link" />
 ```
 
-## Local deployment
+## 本地部署
 
-By default, icons are deployed at [iconfont.cn](http://iconfont.cn), publicly available repository of a huge set of icons. In case you need to use a locally deployed version of the icon font, you can refer to [this example](https://github.com/ant-design/antd-init/tree/master/examples/local-iconfont)。
+图标默认托管在 [iconfont.cn](http://iconfont.cn)，默认公网可访问。如需本地部署，可参考 [示例](https://github.com/ant-design/antd-init/tree/master/examples/local-iconfont)。
 
-## List of icons
+## 图标列表
 
-> Click the icon and copy the code。
+> 点击图标复制代码。
 
-### Directional Icons
 
-```__react
-import IconSet from 'site/theme/template/IconSet';
-ReactDOM.render(<IconSet className="icons" catigory="direction" />, mountNode);
-```
-
-### Suggested Icons
+### 提示建议性图标
 
 ```__react
 import IconSet from 'site/theme/template/IconSet';
 ReactDOM.render(<IconSet className="icons" catigory="suggestion" />, mountNode);
 ```
 
-### Application Icons
+### 网站通用图标
 
 ```__react
 import IconSet from 'site/theme/template/IconSet';
-ReactDOM.render(<IconSet className="icons" catigory="other" />, mountNode);
+ReactDOM.render(<IconSet className="icons" catigory="normal" />, mountNode);
 ```
 
-### Brand and Logos
+### 品牌和标识
 
 ```__react
 import IconSet from 'site/theme/template/IconSet';
-ReactDOM.render(<IconSet className="icons" catigory="logo" />, mountNode);
+ReactDOM.render(<IconSet className="icons" catigory="brand" />, mountNode);
 ```
 
+### 业务图标
+
+```__react
+import IconSet from 'site/theme/template/IconSet';
+ReactDOM.render(<IconSet className="icons" catigory="biz" />, mountNode);
+```
 ## API
 
-You can set `style` and `className` for size and color of icons because they are still fonts in essence.
+由于图标字体本质上还是文字，可以使用 `style` 和 `className` 设置图标的大小和颜色。
 
 ```jsx
 <Icon type="question" style={{ fontSize: 16, color: '#08c' }} />
 ```
 
-| Property | Description | Type | Default |
-| -------- | ----------- | ---- | ------- |
-| spin | Rotate icon with animation | boolean | false |
-| style | style properties of icon, like fontSize and color | object | - |
-| type | Type of ant design icon | string | - |
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| spin | 是否有旋转动画 | boolean | false |
+| style | 设置图标的样式，例如 fontSize 和 color | object | - |
+| type | 图标类型 | string | - |
